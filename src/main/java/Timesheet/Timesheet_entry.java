@@ -70,10 +70,14 @@ public class Timesheet_entry {
 
         } else if (ss==1)
         {
+        	System.out.println("Today is working day");
+        	
             ww.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[id$='effortUnassign01']")));
             driver.findElement(By.cssSelector("input[id$='effortUnassign01']")).clear();
             driver.findElement(By.cssSelector("input[id$='effortUnassign01']")).sendKeys("9");
             driver.findElement(By.cssSelector("input[value='Submit']")).click();
+            www.until(ExpectedConditions.alertIsPresent());
+            www.until(ExpectedConditions.alertIsPresent()).accept();
             Thread.sleep(3000);
             driver.quit();
         }
