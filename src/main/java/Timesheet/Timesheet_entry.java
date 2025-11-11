@@ -71,7 +71,6 @@ public class Timesheet_entry {
         } else if (ss==1)
         {
         	System.out.println("Today is working day");
-        	System.out.print("Today is weekdays");
         	
             ww.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[id$='effortUnassign01']")));
             driver.findElement(By.cssSelector("input[id$='effortUnassign01']")).clear();
